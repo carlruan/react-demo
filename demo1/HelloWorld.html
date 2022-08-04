@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+
+    <script src="script/react.development.js"></script>
+    <script src="script/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      //   const div = document.createElement("div");
+      //   div.innerHTML = "HEllO WORLD";
+      //   const root = document.getElementById("root");
+      //   root.appendChild(div);
+
+      const button = React.createElement(
+        "button",
+        {
+          id: "btn",
+          className: "button",
+          type: "button",
+          onClick: () => alert(123),
+        },
+        "click me"
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(button);
+      //const div = React.createElement("div", {}, "我是React创建的div"); // 创建一个React元素
+      // const root = ReactDOM.createRoot(document.getElementById("root"));
+      // root.render(div);
+    </script>
+  </body>
+</html>
